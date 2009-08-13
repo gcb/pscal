@@ -3,10 +3,13 @@
 # Copyright (C) 1987 by Pipeline Associates, Inc.
 # Permission is granted to modify and distribute this free of charge.
 
+#NOTE: this require latin1 encoding
+#NOTE: this probably require ts=8
+
 # initializations
 V=1.15-1
 
-LANGUAGE=`echo $LANG | cut -d_ -f1 | cut -d. -f1` #cleans up moder LANG patter. e.g. it_IT.UTF-8
+LANGUAGE=`echo $LANG | cut -d. -f1` #removes encoding. e.g. it_IT.UTF-8
 
 TITLE_FONT=Times-Bold
 DAY_FONT=Helvetica-Bold
@@ -38,6 +41,7 @@ DAYNUMS="false"
 EUROPEAN_STYLE="false"
 
 # set messages, based on the value of $LANGUAGE
+#this block ends at EOFmessages
 setmessage() {
 #
 # CATALAN
@@ -392,6 +396,7 @@ W celu uzyskania poprawnych czcionek na wydruku nale¿y u¿yæ 'ogonkify -AT -N'.
 # PORTUGUESE
 #
     elif test \
+	    "$LANGUAGE" = "pt" -o \
 	    "$LANGUAGE" = "pt_BR" -o \
 	    "$LANGUAGE" = "portuguese" -o \
 	    "$LANGUAGE" = "Portuguese";
@@ -637,6 +642,7 @@ Russian, Serbian," 1>&2
     fi
 } # setmessage
 
+#EOFmessages
 
 # default messages
 setmessage
