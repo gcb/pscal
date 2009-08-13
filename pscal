@@ -8,7 +8,7 @@
 # initializations
 V=1.15
 
-LANGUAGE="$LANG"
+LANGUAGE=`echo $LANG | cut -d_ -f1 | cut -d. -f1` #cleans up moder LANG patter. e.g. it_IT.UTF-8
 
 TITLE_FONT=Times-Bold
 DAY_FONT=Helvetica-Bold
