@@ -1,12 +1,10 @@
 #!/bin/sh
 
-# $Id: pscal,v 1.26 2005/01/01 21:20:04 mark Exp $
-
 # Copyright (C) 1987 by Pipeline Associates, Inc.
 # Permission is granted to modify and distribute this free of charge.
 
 # initializations
-V=1.15
+V=1.15-1
 
 LANGUAGE=`echo $LANG | cut -d_ -f1 | cut -d. -f1` #cleans up moder LANG patter. e.g. it_IT.UTF-8
 
