@@ -51,12 +51,13 @@ setmessage() {
 	    "$LANGUAGE" = "catalan" -o \
 	    "$LANGUAGE" = "Catalan";
     then
+	LANGUAGE="ca"
 	VERSION="Pscal-$V: un formatador de calendaris en PostScript"
 
 	USAGE="\
 Pscal és un programa que genera un PostScript per imprimir calendaris
 
-Us: pscal [-hmnRrv] [-d diàmetre] [-eFf font] [-L idioma] [mes [any]]
+Us: pscal [-hmnRrv] [-d diàmetre] [-eFf font] [-L idioma] [-c country] [mes [any]]
 Opcions:
   -d  diàmetrede la lluna (predeterminat = 13)
   -e  font dels events (predeterminat = Times-Roman)
@@ -91,13 +92,15 @@ Opcions:
 	    "$LANGUAGE" = "dansk" -o \
 	    "$LANGUAGE" = "Dansk";
     then
+	LANGUAGE="da"
 	VERSION="Pscal-$V: formater en PostScript kalender"
 
 	USAGE="\
 Pscal er et program til at printe kalendere i PostScript.
 
-Brug: pscal [-hmnRrv] [-d diameter] [-eFf font] [-L sprog] [måned [år]]
+Brug: pscal [-hmnRrv] [-d diameter] [-eFf font] [-L sprog] [-c country] [måned [år]]
 Valgmuligheder:
+  -c  country to be used for holidays
   -d  månediameter (normalværdi = 13)
   -e  skrifttype til begivenheder (normalværdi = Times-Roman)
   -F  skrifttype til titel (normalværdi = Times-Bold)
@@ -130,13 +133,15 @@ Valgmuligheder:
 	    "$LANGUAGE" = "english" -o \
 	    "$LANGUAGE" = "English";
     then
+	LANGUAGE="en"
 	VERSION="Pscal-$V: a PostScript calendar formatter"
 
 	USAGE="\
 Pscal is a PostScript program to print calendars.
 
-Usage: pscal [-hmnRrv] [-d diameter] [-eFf font] [-L language] [month [year]]
+Usage: pscal [-hmnRrv] [-d diameter] [-eFf font] [-L language] [-c country] [month [year]]
 Options:
+  -c  country to be used for holidays
   -d  moon diameter (default = 13)
   -e  event font (default = Times-Roman)
   -F  title font (default = Times-Bold)
@@ -167,13 +172,15 @@ Options:
 	    "$LANGUAGE" = "esperanto" -o \
 	    "$LANGUAGE" = "Esperanto";
     then
+	LANGUAGE="eo"
 	VERSION="Pscal-$V: Postskripta kalendar-preparilo"
 
 	USAGE="\
 Pscal estas programo en Postskripto [PostScript] por presi kalendarojn.
 
-Uzo: pscal [-hmnRrv] [-d diametro] [-eFf tiparo] [-L lingvo] [monato [jaro]]
+Uzo: pscal [-hmnRrv] [-d diametro] [-eFf tiparo] [-L lingvo] [-c country] [monato [jaro]]
 Elektiloj (kaj iliaj defaultoj):
+  -c  country to be used for holidays
   -d  diametro de la lun-simbolo (13)
   -e  tiparo por eventoj (Times-Roman)
   -F  tiparo por titolo (Times-Bold)
@@ -209,13 +216,15 @@ ghi uzas la kutiman \`Zamenhofan' au \`fundamentan' transliteradon.
 	    "$LANGUAGE" = "finnish" -o \
 	    "$LANGUAGE" = "Finnish";
     then
+	LANGUAGE="fi"
 	VERSION="Pscal-$V: PostScript kalenterin muokkaaja"
 
 	USAGE="\
 Pscal on PostScript ohjelma kalentereiden tulostukseen.
 
-Usage: pscal [-hmnRrv] [-d diameter] [-eFf font] [-L language] [month [year]]
+Usage: pscal [-hmnRrv] [-d diameter] [-eFf font] [-L language] [-c country] [month [year]]
 Options:
+  -c  country to be used for holidays
   -d  kuun halkaisija (oletus = 13)
   -e  tapahtuma fontti (oletus = Times-Roman)
   -F  otsikko fontri (oletus = Times-Bold)
@@ -246,13 +255,15 @@ Options:
 	    "$LANGUAGE" = "french" -o \
 	    "$LANGUAGE" = "French";
     then
+	LANGUAGE="fr"
 	VERSION="Pscal-$V: formateur PostScript de calendrier"
 
 	USAGE="\
 Pscal est un programme PostScript destiné à imprimer les calendriers.
 
-Usage: pscal [-hmnRrv] [-d diamètre] [-eFf font] [-L langage] [mois [année]]
+Usage: pscal [-hmnRrv] [-d diamètre] [-eFf font] [-L langage] [-c country] [mois [année]]
 Options:
+  -c  country to be used for holidays
   -d  diamètre de la Lune (défaut = 13)
   -e  event font (défaut = Times-Roman)
   -F  title font (défaut = Times-Bold)
@@ -283,13 +294,15 @@ Options:
 	    "$LANGUAGE" = "german" -o \
 	    "$LANGUAGE" = "German";
     then
+	LANGUAGE="de"
 	VERSION="Pscal-$V: a PostScript calendar formatter"
 
 	USAGE="\
 Pscal is a PostScript program to print calendars.
 
-Usage: pscal [-hmnRrv] [-d diameter] [-eFf font] [-L language] [month [year]]
+Usage: pscal [-hmnRrv] [-d diameter] [-eFf font] [-L language] [-c country] [month [year]]
 Options:
+  -c  country to be used for holidays
   -d  moon diameter (default = 13)
   -e  event font (default = Times-Roman)
   -F  title font (default = Times-Bold)
@@ -322,13 +335,15 @@ Options:
 	    "$LANGUAGE" = "italian" -o \
 	    "$LANGUAGE" = "Italian";
     then
+	LANGUAGE="it"
 	VERSION="Pscal-$V: un creatore di calendari in formato Postscript"
 
 	USAGE="\
 Pscal è un programma PostScript per stampare calendari.
 
-Uso: pscal [-hmnRrv] [-d diametro] [-eFf font] [-L lingua] [mese [anno]]
+Uso: pscal [-hmnRrv] [-d diametro] [-eFf font] [-L lingua] [-c country] [mese [anno]]
 Opzioni:
+  -c  country to be used for holidays
   -d  diametro della luna (default = 13)
   -e  font della ricorrenza (default = Times-Roman)
   -F  font del titolo (default = Times-Bold)
@@ -361,13 +376,15 @@ Opzioni:
 	    "$LANGUAGE" = "polish" -o \
 	    "$LANGUAGE" = "Polish";
     then
+	LANGUAGE="pl"
 	VERSION="Pscal-$V: program generuj±cy kalendarz w PostScripcie"
 
 	USAGE="\
 Pscal jest programem drukuj±cym kalendarz w PostScripcie.
 
-Sk³adnia: pscal [-hmnRrv] [-d wielko¶æ] [-eFf czcionka] [-L jêzyk] [miesi±c [rok]]
+Sk³adnia: pscal [-hmnRrv] [-d wielko¶æ] [-eFf czcionka] [-L jêzyk] [-c country] [miesi±c [rok]]
 Opcje:
+  -c  country to be used for holidays
   -d  wielko¶æ obrazka przedstawiaj±cego fazy ksiê¿yca (domy¶lnie = 13)
   -e  czcionka zdarzeñ (domy¶lnie = Times-Roman)
   -F  czcionka tytu³u (domy¶lnie = Times-Bold)
@@ -401,13 +418,15 @@ W celu uzyskania poprawnych czcionek na wydruku nale¿y u¿yæ 'ogonkify -AT -N'.
 	    "$LANGUAGE" = "portuguese" -o \
 	    "$LANGUAGE" = "Portuguese";
     then
+	LANGUAGE="pt_BR"
 	VERSION="Pscal-$V: um formatador de calendário PostScript"
 
 	USAGE="\
 Pscal é um programa PostScript que imprime calendários
 
-Uso: pscal [-hmnRrv] [-d diametro] [-eFf fonte] [-L linguagem] [mes [ano]]
+Uso: pscal [-hmnRrv] [-d diametro] [-eFf fonte] [-L linguagem] [-c country] [mes [ano]]
 Opções:
+  -c  country to be used for holidays
   -d  diâmetro da lua (padrão = 13)
   -e  fonte para eventos (padrão = Times-Roman)
   -F  fonte para o título (padrão = Times-Bold)
@@ -439,13 +458,15 @@ Opções:
 	    "$LANGUAGE" = "Russian" -o \
 	    "$LANGUAGE" = "ru_RU.KOI8-R";
     then
+	LANGUAGE="ru"
 	VERSION="Pscal-$V: PostScript ÇÅÎÅÒÁÔÏÒ ËÁÌÅÎÄÁÒÅÊ"
 
 	USAGE="\
 Pscal ÜÔÏ ÐÒÏÇÒÁÍÍÁ ÄÌÑ ÐÅÞÁÔÉ ËÁÌÅÎÄÁÒÅÊ.
 
-éÓÐÏÌØÚÏ×ÁÎÉÅ: pscal [-hmnRrv] [-d ÄÉÁÍÅÔÒ] [-eFf ÛÒÉÆÔ] [-L ÑÚÙË] [ÍÅÓÑÃ [ÇÏÄ]]
+éÓÐÏÌØÚÏ×ÁÎÉÅ: pscal [-hmnRrv] [-d ÄÉÁÍÅÔÒ] [-eFf ÛÒÉÆÔ] [-L ÑÚÙË] [-c country] [ÍÅÓÑÃ [ÇÏÄ]]
 ðÁÒÁÍÅÔÒÙ:
+  -c  country to be used for holidays
   -d  ÄÉÁÍÅÔÒ ÌÕÎÙ (ÐÏ ÕÍÏÌÞÁÎÉÀ = 13)
   -e  ÛÒÉÆÔ ÓÏÂÙÔÉÊ (ÐÏ ÕÍÏÌÞÁÎÉÀ = ArialCyrMT)
   -F  ÛÒÉÆÔ ÍÅÓÑÃÅ× (ÐÏ ÕÍÏÌÞÁÎÉÀ = TimesNRCyrMT-Bold)
@@ -483,14 +504,15 @@ Pscal ÜÔÏ ÐÒÏÇÒÁÍÍÁ ÄÌÑ ÐÅÞÁÔÉ ËÁÌÅÎÄÁÒÅÊ.
 	    "$LANGUAGE" = "Srpski" -o \
 	    "$LANGUAGE" = "Serbian";
     then
+	LANGUAGE="yu"
 	VERSION="Pscal-$V: PostScript kalendar"
 
 	USAGE="\
 Pscal je PostScript program za stampanje kalendara.
 
-Usage: pscal [-hmnRrv] [-d diameter] [-eFf font] [-L jezik] [mesec[godina]]
+Usage: pscal [-hmnRrv] [-d diameter] [-eFf font] [-L jezik] [-c country] [mesec[godina]]
 Options:
-
+  -c  country to be used for holidays
   -d  diameter meseca (default = 13)
   -e  stil slova za Dogadjaj (default = Times-Roman)
   -F  stil slova za Naslovna (default = Times-Bold)
@@ -523,13 +545,15 @@ Options:
         "$LANGUAGE" = "slovak" -o \
         "$LANGUAGE" = "Slovensky";
     then
+	LANGUAGE="sk"
     VERSION="Pscal-$V: program generujúci kalendár v PostScripte"
 
     USAGE="\
 Pscal je program vykreslujúci kalendár v PostScripte.
 
-Pou¾itie: pscal [-hmnRrv] [-d veµkos»] [-eFf font] [-L jazyk] [mesiac [rok]]
+Pou¾itie: pscal [-hmnRrv] [-d veµkos»] [-eFf font] [-L jazyk] [-c country] [mesiac [rok]]
 Voµby:
+  -c  country to be used for holidays
   -d  veµkos» obrazca predstavujúceho fázy mesiaca (default = 13)
   -e  font udalosti (default = Times-Roman)
   -F  font nadpisu (default = Times-Bold)
@@ -560,13 +584,15 @@ Aby bol výstup s diakritikov korektný je treba pou¾i»: 'ogonkify -AT -N'.
 	    "$LANGUAGE" = "spanish" -o \
 	    "$LANGUAGE" = "Spanish";
     then
+	LANGUAGE="es"
 	VERSION="Pscal-$V: un formato de calendarios en PostScript"
 
 	USAGE="\
 Pscal es un programa que genera un PostScript para imprimir calendarios
 
-Uso: pscal [-hmnRrv] [-d diámetro] [-eFf font] [-L idioma] [mes [año]]
+Uso: pscal [-hmnRrv] [-d diámetro] [-eFf font] [-L idioma] [-c country] [mes [año]]
 Opcions:
+  -c  country to be used for holidays
   -d  diámetro de la luna (predeterminado = 13)
   -e  fuente de los eventos (predeterminado = Times-Roman)
   -F  fuente del título (predeterminado = Times-Bold)
@@ -598,13 +624,15 @@ Opcions:
 	    "$LANGUAGE" = "turkish" -o \
 	    "$LANGUAGE" = "Turkish";
     then
+	LANGUAGE="tr"
 	VERSION="Pscal-$V: PostScript takvim Ã¼reticisi"
 
 	USAGE="\
 Pscal takvim Ã§Ä±ktÄ±sÄ± Ã¼reten PostScript bir yazÄ±lÄ±mdir.
 
-KullanÄ±m: pscal [-hmnRrv] [-d Ã§ap] [-eFf font] [-L dil] [ay [yÄ±l]]
+KullanÄ±m: pscal [-hmnRrv] [-d Ã§ap] [-eFf font] [-L dil] [-c country] [ay [yÄ±l]]
 SeÃ§enekler:
+  -c  country to be used for holidays
   -d  ay Ã§apÄ± (ilkdeÄŸer = 13)
   -e  tatil fontu (ilk deÄŸer = Times-Roman)
   -F  baÅŸlÄ±k fontu (ilk deÄŸer = Times-Bold)
@@ -649,7 +677,7 @@ setmessage
 
 # process arguments
 while test $# != 0; do
-    case $1 in
+	case $1 in
 	-d)	test $# -lt 2 && { echo "$USAGE" 1>&2; exit 1; }
 		DIAMETER="$2";
 		shift 2;;
@@ -701,11 +729,16 @@ while test $# != 0; do
 		shift;;
 	-s)     EUROPEAN_STYLE="false"
 		shift;;
+	-c)	test $# -lt 2 && { echo "$USAGE" 1>&2; exit 1; }
+		COUNTRY_FOR_HOLIDAYS="$2";
+		shift 2;;
+	-c*)	COUNTRY_FOR_HOLIDAYS=`echo $1 | sed -n 1s/-.//p`;
+		shift;;
 	-v)	echo "$VERSION" 1>&2;
 		exit 1;;
 	--|-)	break;;
 	*)	break
-    esac
+	esac
 done
 
 # try to figure out what year this is
@@ -726,12 +759,12 @@ getyear() {
     # Do the best we can with the last two digits
     YEAR=`date "+%y" 2>&1`
     if echo "$YEAR" | grep '^[0-9][0-9]$' > /dev/null 2>&1; then
-	YEAR="20$YEAR"
+	YEAR="20$YEAR";
 	return;
     fi
 
     echo "Error: Can't determine the year!"
-    exit 1
+    exit 2
 } # getyear
 
 
@@ -743,8 +776,74 @@ case $# in
 	getyear;;
     2)	MONTH=$1 YEAR=$2;;
     *)  echo "$USAGE" 1>&2;
-	exit 1;;
+	exit 3;;
 esac
+
+# can we download a calendar?
+WGET=`which wget`
+FETCH=`which fetch`
+LYNX=`which lynx`
+if [ -x "$WGET" ]; then
+  DOWNLOADER="$WGET"
+  DOWNLOADER_FLAGS="-q -O -"
+elif [ -x "$FETCH" ];then
+  DOWNLOADER="$FETCH"
+  DOWNLOADER_FLAGS=""
+elif [ -x "$LYNX" ]; then
+  DOWNLOADER="$LYNX"
+  DOWNLOADER_FLAGS="--dump"
+fi
+if [ "$DOWNLOADER" -a "$COUNTRY_FOR_HOLIDAYS" -a ! -e holiday-$COUNTRY_FOR_HOLIDAYS ]; then
+  # TODO: make a loop, so -c br,it,fr can work
+  COUNTRY=$COUNTRY_FOR_HOLIDAYS;
+  #transform the contry into what google calendar likes
+  case "$COUNTRY_FOR_HOLIDAYS" in
+    br) LOCATION='brazilian';;
+    it) LOCATION='italian';;
+    *) echo "don't know what to do with that country for the holiday. update the source code" 1>&2;
+    exit 4;;
+  esac
+  #Dowload the ical file
+  if [ ! -e ical-holiday-$COUNTRY ]; then
+    "$DOWNLOADER" $DOWNLOADER_FLAGS "http://www.google.com/calendar/ical/$LANGUAGE.$LOCATION%23holiday%40group.v.calendar.google.com/public/basic.ics" > ical-holiday-$COUNTRY
+    if [ $? -ne 0 ]; then
+      echo "Holiday calendar download failed for $LANGUAGE.$LOCATION." 1>&2;
+      exit 5;
+    fi
+  fi
+  #Convert the ical file to the format we use
+  while read line;
+  do
+    #get fields
+    # they're ordered:
+    # 1. UID
+    # 2. SUMMARY
+    # 3. DTSTART
+    # 4. DTEND
+    FIELD=`echo "$line" | cut -d: -f1`
+    if [ "$FIELD" = "UID" ]; then
+      DATE=""
+      SUMMARY=""
+    elif [ "$FIELD" = "SUMMARY" ]; then
+      # those tr -d are to remove DOS line breaks
+      SUMMARY=`echo "$line" | tr -d '\015' | cut -d: -f2-`
+    elif [ "$FIELD" = "DTSTART;VALUE=DATE" ]; then
+      DATE=`echo "$line" | tr -d '\015' | cut -d: -f2- `
+    elif [ "$FIELD" = "DTEND;VALUE=DATE" ]; then
+      if [ -n "$SUMMARY" -a -n "$DATE" ];then
+	HYEAR=`echo $DATE | cut -b 1-4`
+	if [ "$HYEAR" = "$YEAR" ]; then
+	  HMONTH=`echo $DATE | cut -b 5-6`
+	  HDAY=`echo $DATE | cut -b 7-8`
+	  echo "$HMONTH:$HDAY: $SUMMARY" >> ".unsorted-holiday-$COUNTRY"
+	fi
+      fi
+    fi
+  done < ical-holiday-$COUNTRY
+  sort ".unsorted-holiday-$COUNTRY" > "holiday-$COUNTRY"
+  rm ".unsorted-holiday-$COUNTRY"
+  EFILE=holiday-$COUNTRY
+fi
 
 # determine which holiday file to use
 if [ -n "$EFILE" -a -r "$EFILE" ]; then

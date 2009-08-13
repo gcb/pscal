@@ -2,7 +2,8 @@ NAME:
 	pscal
 
 SYNOPSIS:
-	pscal [-hmnRrv] [-d diameter] [-eFf font] [-L language] [month [year]]
+	pscal [-hmnRrv] [-d diameter] [-eFf font] [-L language] [-c country]
+      	[month [year]]
 
 DESCRIPTION:
 	`Pscal' is a PostScript program to print calendars.
@@ -17,11 +18,19 @@ OPTIONS:
 
 		BANNER="Schedule 1"; CFOOT=Preliminary; pscal 4 1990
 
+	-c Country to use for holidays.
+	   Use ISO two letters code.
+	   only one country can be specified. pscal will try to dowload
+		 an iCal calendar online and then parse it to use as the holiday file.
+		 the -L option affects this option, as you can, for example, print
+		 brazilian holidays using the italian language.
+		 It will not overwrite any file. so every year you have to clean them.
+
 FILES:
 	The file $HOME/.holiday is read and used to print short messages
 	on specified days.  The .holiday file should consist of lines of
 	the form
-		month:day:message string
+		month:day: message string
 	Messages should be 20 characters or less, with no more than 6
 	messages per day.  No spaces should appear from the beginning
 	of a line until after the second colon.
@@ -34,7 +43,7 @@ FILES:
 	The whole process can be turned off by setting EFILE=/dev/null.
 
 AUTHOR:
-	Patrick Wood
+	Patrick Wood, Gabriel Barros
 	Copyright (C) 1987 by Pipeline Associates, Inc.
 	Permission is granted to modify and distribute this free of charge.
 
@@ -48,6 +57,8 @@ BUGS:
 	* The holiday messages should be handled more intelligently (i.e.,
 	  the messages should be clipped to the day).
 	* Some of the message translations are incomplete.
+	* Encoding in the downloaded holiday calendar is UTF8, calendar output
+	  is latin1
 
 SEE ALSO:
 	pcal:
