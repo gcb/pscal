@@ -718,7 +718,7 @@ getyear() {
     # some versions of date don't support %Y, and the year might not be last
     # on the line depending on what locale you're in, so grab something that's
     # four digits and hope it's the year
-    YEAR=`date | sed -n '1s/^.* \([0-9][0-9][0-9][0-9]\).*$/\1/p'`
+    YEAR=`(export LC_ALL=C; date) | sed -n '1s/^.* \([0-9][0-9][0-9][0-9]\).*$/\1/p'`
     if echo "$YEAR" | grep '^[0-9][0-9][0-9][0-9]$' > /dev/null 2>&1; then
 	return;
     fi
